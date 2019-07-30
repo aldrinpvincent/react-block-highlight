@@ -31,7 +31,10 @@
   "author": "aldrinpvincent",
   "homepage": "https://react-block-highlight.netlify.com/",
   "license": "MIT",
-  "repository": "https://github.com/aldrinpvincent/react-block-highlight",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aldrinpvincent/react-block-highlight.git"
+  },
   "keywords": [
     "react-component",
     "canvas",
