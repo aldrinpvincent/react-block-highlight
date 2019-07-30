@@ -1,0 +1,24 @@
+html,
+body,
+section,
+article,
+div {
+  height: 100%;
+}
+
+.container {
+  display: flex;
+}
+
+.left {
+  flex: 1;
+  padding: 1rem;
+  height: 90%;
+}
+
+.right {
+  height: 90%;
+  margin: 20px;
+  flex: 1;
+  border: 1px solid black;
+}
