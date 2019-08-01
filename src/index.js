@@ -25,26 +25,24 @@ const ReactBlockHighlighter = ({ id, x, y, height, width, opacity, color }) => {
   }, [x, y, height, width, id, color, opacity]);
 
   return (
-    <section style={{ width: "100%", height: "100%" }}>
-      <canvas style={{ width: "100%", height: "100%" }} ref={canvasRef} id={id} />
-    </section>
+    <canvas style={{ width: "100%", height: "100%" }} ref={canvasRef} id={id} />
   );
 };
 
 ReactBlockHighlighter.propTypes = {
   /** Unique id for the canvas element */
   id: PropTypes.string,
-  /** x-coordinate of origin */
+  /** x-coordinate of starting point */
   x: PropTypes.number,
-  /** y-coordinate of origin */
+  /** y-coordinate of starting point */
   y: PropTypes.number,
-  /** Height of the rectangle to be highlighted */
+  /** Height of the area to be highlighted */
   height: PropTypes.number,
-  /** Width of the rectangle to be highlighted */
+  /** Width of the area to be highlighted */
   width: PropTypes.number,
-  /** Opacity of the rectangle to be highlighted */
+  /** Opacity of the area to be highlighted */
   opacity: PropTypes.number,
-  /** Color of the rectangle to be highlighted */
+  /** Color of the area to be highlighted */
   color: PropTypes.string
 }
 
@@ -53,7 +51,9 @@ ReactBlockHighlighter.defaultProps = {
   opacity: .5,
   color: "#ffff00",
   x: 0,
-  y: 0
+  y: 0,
+  width: 250,
+  height: 20
 };
 
 export default ReactBlockHighlighter;
