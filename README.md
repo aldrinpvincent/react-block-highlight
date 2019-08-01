@@ -1,6 +1,33 @@
 # React Block Highlight
 
-React Component to highlight any part of the containing block in reactangle size using canvas.
+React Component to highlight any part of the containing block in rectangle.
+
+### Installation
+
+```bash
+  npm i react-block-highlight --save
+```
+
+### Usage
+
+#### Importing component
+
+```js
+import ReactBlockHighlight from "react-highlight";
+```
+
+#### Highlighting some part of block
+
+Code snippet that requires syntax highlighting should be passed as children to Highlight component in string format. Language name of code snippet should be specified as className.
+
+```html
+const highlightProps = { x, y, height, width, opacity, color };
+<ReactBlockHighlight id="demo-space" {...highlightProps}>
+  {
+  <div>Hifglight some part of this div</div>
+  }
+</ReactBlockHighlight>
+```
 
 Props
 

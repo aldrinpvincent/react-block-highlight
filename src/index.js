@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
  * React Component to highlight any part of the containing block in reactangle size.
  */
 
-const ReactBlockHighlighter = ({ id, x, y, height, width, opacity, color }) => {
+const ReactBlockHighlight = ({ id, x, y, height, width, opacity, color, children }) => {
   const canvasRef = useRef(null);
   const ctx = useRef();
   const canvas = useRef({});
@@ -25,11 +25,13 @@ const ReactBlockHighlighter = ({ id, x, y, height, width, opacity, color }) => {
   }, [x, y, height, width, id, color, opacity]);
 
   return (
-    <canvas style={{ width: "100%", height: "100%" }} ref={canvasRef} id={id} />
-  );
+    <section style={{ position: "relative", left: "0", top: "0" }}>
+      {children}
+      <canvas style={{ width: "100%", height: "100%", position: "absolute", top: "0", "left": "0" }} ref={canvasRef} id={id} />
+    </section>);
 };
 
-ReactBlockHighlighter.propTypes = {
+ReactBlockHighlight.propTypes = {
   /** Unique id for the canvas element */
   id: PropTypes.string,
   /** x-coordinate of starting point */
@@ -46,7 +48,7 @@ ReactBlockHighlighter.propTypes = {
   color: PropTypes.string
 }
 
-ReactBlockHighlighter.defaultProps = {
+ReactBlockHighlight.defaultProps = {
   id: "block-highlight-canvas",
   opacity: .5,
   color: "#ffff00",
@@ -56,4 +58,4 @@ ReactBlockHighlighter.defaultProps = {
   height: 20
 };
 
-export default ReactBlockHighlighter;
+export default ReactBlockHighlight;

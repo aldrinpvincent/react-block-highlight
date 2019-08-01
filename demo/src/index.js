@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { render } from 'react-dom';
-import ReactBlockHighlighter from '../../src';
+import ReactBlockHighlight from '../../src';
 import DemoPropsInput from './PropsInput';
 import "./index.css";
+import DemoText from './Text';
 
 function Demo() {
-  const [x, setX] = useState(6);
-  const [y, setY] = useState(28);
+  const [x, setX] = useState(0);
+  const [y, setY] = useState(0);
   const [height, setHeight] = useState(10);
   const [width, setWidth] = useState(250);
   const [color, setColor] = useState("#ffff00");
@@ -21,7 +22,9 @@ function Demo() {
         <DemoPropsInput {...inputProps} />
       </div>
       <div className="right">
-        <ReactBlockHighlighter id="demo-space" {...highlightProps} />
+        <ReactBlockHighlight id="demo-space" {...highlightProps} >
+          <DemoText />
+        </ReactBlockHighlight>
       </div>
     </section>
   )

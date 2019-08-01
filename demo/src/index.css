@@ -4,6 +4,7 @@ section,
 article,
 div {
   height: 100%;
+  box-sizing: border-box;
 }
 
 .container {
@@ -18,7 +19,6 @@ div {
 
 .right {
   height: 90%;
-  margin: 20px;
   flex: 1;
   border: 1px solid black;
 }
