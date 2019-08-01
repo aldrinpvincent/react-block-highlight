@@ -18,10 +18,11 @@ import ReactBlockHighlight from "react-highlight";
 
 #### Highlighting some part of block
 
-Code snippet that requires syntax highlighting should be passed as children to Highlight component in string format. Language name of code snippet should be specified as className.
+Part of the block that requires to be highlighted can be passed in props with opacity and color
 
 ```html
 const highlightProps = { x, y, height, width, opacity, color };
+
 <ReactBlockHighlight id="demo-space" {...highlightProps}>
   {
   <div>Hifglight some part of this div</div>
