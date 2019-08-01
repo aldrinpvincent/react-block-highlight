@@ -2,6 +2,8 @@
 
 React Component to highlight any part of the containing block in rectangle.
 
+Demo - https://react-block-highlight.netlify.com/
+
 ### Installation
 
 ```bash
@@ -41,5 +43,3 @@ Props
 | width   |   number    |    Width of the area to be highlighted     |           250            |
 | opacity | number(0-1) |   Opacity of the area to be highlighted    |           0.5            |
 | color   |   number    | Color of the area to be highlighted in RGB |        "#ffff00"         |
-
-Demo - https://react-block-highlight.netlify.com/
