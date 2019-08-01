@@ -15,7 +15,7 @@ Demo - https://react-block-highlight.netlify.com/
 #### Importing component
 
 ```js
-import ReactBlockHighlight from "react-highlight";
+import ReactBlockHighlight from "react-block-highlight";
 ```
 
 #### Highlighting some part of block
