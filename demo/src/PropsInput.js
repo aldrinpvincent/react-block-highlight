@@ -2,7 +2,7 @@ import React from "react";
 const DemoPropsInput = ({ x, y, height, width, opacity, color, setColor, setHeight, setOpacity, setWidth, setX, setY }) => {
   return (
     <section>
-      <h3>Highlighter properties</h3>
+      <h3>Highlight properties</h3>
       <label htmlFor="x">Origin - x : </label>
       <input
         type="number"
